@@ -35,7 +35,7 @@ public class StudentControler {
     @PutMapping(path= "{studentID}")
     public void updateStudent(
             @PathVariable("studentID") int studentID,
-            @RequestParam(required = true) String name,
+            @RequestParam(required = false) String name,
             @RequestParam(required = false) String email){
         studentService.updateStudent(studentID, name, email);
 
